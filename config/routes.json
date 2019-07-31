@@ -2,7 +2,7 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/",
+      "path": "/:id",
       "handler": "Nexmo.index",
       "config": {
         "policies": []
