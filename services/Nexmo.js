@@ -21,7 +21,7 @@ module.exports = {
             let payment = order.meta.payment === "paypal" ? "Paid via Paypal" : "COD";
 
             let message = `New order from ${order.user.name} (${order.meta.phone}). ${orderType} ${order.meta.date} ${order.meta.time} 
-            at ${orderPlace}. ${payment}`;
+            at ${orderPlace}. ${payment} \n`;
 
             var sendSms = new Promise(function(resolve, reject) {
             nexmo.message.sendSms(sender, recipient, message, (error, response) => {
